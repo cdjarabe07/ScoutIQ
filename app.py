@@ -66,7 +66,14 @@ language = st.sidebar.selectbox(
 # ===============================
 # LOAD DATA
 # ===============================
+import zipfile
+import os
 
+if not os.path.exists("female_players.zip"):
+    st.error("Dataset not found")
+with zipfile.ZipFile("female_players.zip") as z:
+    df = pd.read_csv(z.open("female_players.csv"))
+    
 @st.cache_data
 def load_data():
 
@@ -312,3 +319,4 @@ elif menu == "🏆 Club Ranking":
 
 
     st.dataframe(ranking.head(20))
+
