@@ -70,7 +70,7 @@ language = st.sidebar.selectbox(
 @st.cache_data
 def load_data():
 
-    df = pd.read_csv("female_players.csv", low_memory=False)
+    df = pd.read_csv("female_players.zip", compression="zip", low_memory=False)
 
     df = df[
         (df["overall"] > 0) &
@@ -309,5 +309,6 @@ elif menu == "🏆 Club Ranking":
         .sort_values("avg_rating",ascending=False)
         .reset_index()
     )
+
 
     st.dataframe(ranking.head(20))
