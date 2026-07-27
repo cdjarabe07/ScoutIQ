@@ -1,5 +1,3 @@
-# ScoutIQ – Football Intelligence Platform ' https://scoutiq-cdjarabe.streamlit.app/ '
-
 ScoutIQ is a data-driven football analytics dashboard built with Python and Streamlit.
 
 The application allows users to explore player data, analyze performance metrics, and simulate transfer impacts using football data.
